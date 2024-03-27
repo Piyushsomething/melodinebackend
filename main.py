@@ -1,14 +1,19 @@
 from typing import Optional
-
 from fastapi import FastAPI
+from categories import categories_router
+from songs import songs_router
+from about import about_router
+from artist import artists_router
+from popularsongs import popular_songs_router
+
 
 app = FastAPI()
-
+app.include_router(categories_router, prefix="/api")
+app.include_router(songs_router, prefix="/api")
+app.include_router(about_router, prefix="/api")
+app.include_router(artists_router, prefix="/api")
+app.include_router(popular_songs_router, prefix="/api")
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+    return {"message": "Hello from MelonI backend!"}
