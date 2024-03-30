@@ -1,11 +1,11 @@
-from fastapi import FastAPI, HTTPException, APIRouter
+from fastapi import FastAPI
 import uvicorn
 from categories import categories_router
 from songs import songs_router
 from about import about_router
 from artist import artists_router
 from popularsongs import popular_songs_router
-
+from helpers import all_data
 
 app = FastAPI()
 app.include_router(categories_router, prefix="/api")
@@ -14,9 +14,9 @@ app.include_router(about_router, prefix="/api")
 app.include_router(artists_router, prefix="/api")
 app.include_router(popular_songs_router, prefix="/api")
 
-@app.get("/")
+@app.get("/api/alldata")
 async def root():
-    return {"message": "Hello from MelonI backend!"}
+    return all_data
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
