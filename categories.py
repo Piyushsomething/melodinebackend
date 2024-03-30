@@ -1,7 +1,7 @@
 from fastapi import HTTPException, APIRouter
 from pydantic import BaseModel
 from typing import List
-from helpers import all_data
+from helpers import all_data,save_data
 
 class Category(BaseModel):
     name: str
@@ -18,6 +18,7 @@ categories_router = APIRouter()
 #     {"name": "Jazz", "img": "/images/genre/jazz.PNG", "route": "#"},
 #     {"name": "Disco", "img": "/images/genre/disco.PNG", "route": "#"},
 # ]
+
 initial_categories = all_data["initial_categories"]
 categories = [data for data in initial_categories]
 
@@ -36,13 +37,17 @@ async def read_categories():
 @categories_router.post("/categories", response_model=Category)
 async def create_category(category: Category):
     categories.append(category)
+    all_data["initial_categories"] = categories
+    save_data(all_data)
     return category
 
 @categories_router.put("/categories/{category_name}", response_model=Category)
 async def update_category(category_name: str, updated_category: Category):
     try:
-        index = next(i for i, category in enumerate(categories) if category.name == category_name)
-        categories[index] = updated_category
+        index = next(i for i, category in enumerate(categories) if category["name"] == category_name)
+        categories[index] = updated_category.dict()
+        all_data["initial_categories"][index] = categories
+        save_data(all_data)
         return updated_category
     except StopIteration:
         raise HTTPException(status_code=404, detail="Category not found")
@@ -50,8 +55,11 @@ async def update_category(category_name: str, updated_category: Category):
 @categories_router.delete("/categories/{category_name}")
 async def delete_category(category_name: str):
     try:
-        index = next(i for i, category in enumerate(categories) if category.name == category_name)
+        # print((categories), type(categories[0]))
+        index = next(i for i, category in enumerate(categories) if category["name"] == category_name)
         del categories[index]
+        del all_data["initial_categories"][index]
+        save_data(all_data)
         return {"message": "Category deleted successfully"}
     except StopIteration:
         raise HTTPException(status_code=404, detail="Category not found")
