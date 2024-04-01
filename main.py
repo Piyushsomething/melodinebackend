@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import uvicorn
 from categories import categories_router
+from fastapi.middleware.cors import CORSMiddleware
 from songs import songs_router
 from about import about_router
 from artist import artists_router
@@ -8,6 +9,15 @@ from popularsongs import popular_songs_router
 from helpers import all_data
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow requests from any origin
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],  # Add allowed HTTP methods
+    allow_headers=["*"],  # Add allowed headers
+)
+
 app.include_router(categories_router, prefix="/api")
 app.include_router(songs_router, prefix="/api")
 app.include_router(about_router, prefix="/api")
