@@ -1,0 +1,157 @@
+{
+    "initial_about_data": {
+      "title": "About Melodine Records",
+      "paragraphs": [
+        "Where the rhythm of life meets the harmony of dreams. Founded in 2024, Melodine Records emerges as a beacon for aspiring artists and producers, a sanctuary where talent meets opportunity.",
+        "At Melodine Records, our mission is simple yet profound: to provide a nurturing platform for artists to amplify their voices and for producers to sculpt their sonic landscapes. We are not just a record label; we are a catalyst for artistic evolution, a conduit through which melodies flow and dreams take flight.",
+        "Our ethos is rooted in a deep-seated passion for music in all its forms. We believe in the power of melody to transcend boundaries, to uplift spirits, and to soundtrack the moments that define our lives. Whether you're seeking solace in a soulful ballad or igniting the dance floor with infectious beats, Melodine Records is here to accompany you through every mood and occasion.",
+        "But our journey is not one we embark upon alone. We recognize that our success is intertwined with the support and enthusiasm of our community. That's why we call upon you, music lovers and dream chasers alike, to join us on this exhilarating voyage. Together, let us cultivate a rich tapestry of sound, weaving together diverse voices and genres to create something truly extraordinary.",
+        "So, whether you're an artist looking for a platform to shine or a music aficionado eager to discover your next favorite tune, Melodine Records welcomes you with open arms. Let's write the next chapter in the symphony of our lives, one melody at a time. Thank you for your support as we embark on this thrilling adventure together."
+    ],
+      "image": "https://i.imgur.com/WbQnbas.png"
+    },
+    "initial_artists": [
+      {
+        "name": "Artist 1",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ante et elit convallis scelerisque. Sed ac ante sit amet ipsum fringilla tincidunt.",
+        "songs": [
+          {
+            "name": "Song A",
+            "length": "3:45",
+            "info": "Lorem ipsum dolor sit amet."
+          },
+          {
+            "name": "Song B",
+            "length": "4:20",
+            "info": "Sed do eiusmod tempor incididunt."
+          },
+          {
+            "name": "Song C",
+            "length": "2:55",
+            "info": "Ut enim ad minim veniam."
+          },
+          {
+            "name": "Song D",
+            "length": "5:10",
+            "info": "Duis aute irure dolor in reprehenderit."
+          },
+          {
+            "name": "Song E",
+            "length": "3:30",
+            "info": "Excepteur sint occaecat cupidatat non proident."
+          }
+        ],
+        "spotifyLink": "https://open.spotify.com",
+        "youtubeLink": "https://www.youtube.com",
+        "wikipediaLink": "https://www.wikipedia.org",
+        "appleMusicLink": "https://music.apple.com",
+        "profileIcon": "https://via.placeholder.com/150"
+      },
+      {
+        "name": "Artist 2",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ante et elit convallis scelerisque. Sed ac ante sit amet ipsum fringilla tincidunt.",
+        "songs": [
+          {
+            "name": "Song X",
+            "length": "4:00",
+            "info": "Lorem ipsum dolor sit amet."
+          },
+          {
+            "name": "Song Y",
+            "length": "3:15",
+            "info": "Sed do eiusmod tempor incididunt."
+          },
+          {
+            "name": "Song Z",
+            "length": "3:45",
+            "info": "Ut enim ad minim veniam."
+          }
+        ],
+        "spotifyLink": "https://open.spotify.com",
+        "youtubeLink": "https://www.youtube.com",
+        "wikipediaLink": "https://www.wikipedia.org",
+        "appleMusicLink": "https://music.apple.com",
+        "profileIcon": "https://via.placeholder.com/150"
+      }
+    ],
+    "initial_categories": [
+      {
+        "name": "Rock",
+        "img": "/images/genre/rock.PNG",
+        "route": "#"
+      },
+      {
+        "name": "Pop",
+        "img": "/images/genre/pop.PNG",
+        "route": "#"
+      },
+      {
+        "name": "Jazz",
+        "img": "/images/genre/jazz.PNG",
+        "route": "#"
+      },
+      {
+        "name": "Disco",
+        "img": "/images/genre/disco.PNG",
+        "route": "#"
+      }
+    ],
+    "initial_popular_release_songs": [
+      {
+        "id": 1,
+        "title": "Light Comes Up",
+        "artist": "Bayza",
+        "duration": "02:49"
+      },
+      {
+        "id": 2,
+        "title": "On Your Mind",
+        "artist": "NEW",
+        "duration": "02:33"
+      },
+      {
+        "id": 3,
+        "title": "Everything I Wanted",
+        "artist": "Billie Eilish",
+        "duration": "04:12"
+      },
+      {
+        "id": 4,
+        "title": "Young & Free",
+        "artist": "Bayza",
+        "duration": "03:23"
+      }
+    ],
+    "initial_songs": [
+      {
+        "id": 1,
+        "title": "Light Comes Up",
+        "artist": "Bayza",
+        "duration": "02:49"
+      },
+      {
+        "id": 2,
+        "title": "On Your Mind",
+        "artist": "Bayza",
+        "duration": "02:33"
+      },
+      {
+        "id": 3,
+        "title": "Everything I Wanted",
+        "artist": "Billie Eilish",
+        "duration": "04:12"
+      },
+      {
+        "id": 4,
+        "title": "Young & Free",
+        "artist": "Bayza",
+        "duration": "03:23"
+      },
+      {
+        "id": 5,
+        "title": "Solace",
+        "artist": "Bayza",
+        "duration": "03:52"
+      }
+    ]
+  }
